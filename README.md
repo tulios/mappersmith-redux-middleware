@@ -1,3 +1,4 @@
+[![Build Status](https://travis-ci.org/tulios/mappersmith-redux-middleware.svg?branch=master)](https://travis-ci.org/tulios/mappersmith-redux-middleware)
 # Mappersmith Redux Middleware
 
 __MappersmithReduxMiddleware__ is a middleware for [mappersmith](https://github.com/tulios/mappersmith) which dispatches your request lifecycle to a redux store
