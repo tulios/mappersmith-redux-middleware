@@ -6,6 +6,7 @@
     "build-node": "rm -rf lib/* && ./node_modules/.bin/babel index.js -d lib",
     "build-browser": "rm -rf dist/* && ./node_modules/.bin/webpack --config webpack.conf.js",
     "test": "npm run build-node && NODE_ENV=test ./node_modules/.bin/karma start karma.conf.js",
+    "test-ci": "SINGLE_RUN=true npm run test",
     "build": "npm run build-node && npm run build-browser"
   },
   "repository": {
