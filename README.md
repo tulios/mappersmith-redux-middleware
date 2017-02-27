@@ -1,3 +1,4 @@
+[![npm version](https://badge.fury.io/js/mappersmith-redux-middleware.svg)](http://badge.fury.io/js/mappersmith-redux-middleware)
 [![Build Status](https://travis-ci.org/tulios/mappersmith-redux-middleware.svg?branch=master)](https://travis-ci.org/tulios/mappersmith-redux-middleware)
 # Mappersmith Redux Middleware
 
