@@ -2,8 +2,7 @@ let store = null
 
 export const setStore = (reduxStore) => store = reduxStore
 
-const typeFor = (phase, name, method) =>
-  `mappersmith/${[phase, name, method].map((n) => n.toUpperCase()).join('_')}`
+const typeFor = (phase, name, method) => `mappersmith/${phase}/${name}/${method}`
 
 const requestPayload = (request) => ({
   params: request.params(),

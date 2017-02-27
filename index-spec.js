@@ -44,7 +44,7 @@ describe('MappersmithReduxMiddleware', () => {
       .then((response) => {
         const actions = store.getActions()
         expect(actions[0]).toEqual({
-          type: 'mappersmith/REQUEST_BLOG_POST',
+          type: 'mappersmith/request/Blog/post',
           payload: {
             params: { title: 'my title' },
             headers: { 'x-header': 'value' },
@@ -66,9 +66,9 @@ describe('MappersmithReduxMiddleware', () => {
       client.Blog.post()
         .then((response) => {
           const actions = store.getActions()
-          expect(actions[0]).toEqual(jasmine.objectContaining({ type: 'mappersmith/REQUEST_BLOG_POST' }))
+          expect(actions[0]).toEqual(jasmine.objectContaining({ type: 'mappersmith/request/Blog/post' }))
           expect(actions[1]).toEqual({
-            type: 'mappersmith/RESPONSE_BLOG_POST',
+            type: 'mappersmith/response/Blog/post',
             payload: {
               status: 200,
               headers: { 'content-type': 'application/json' },
@@ -91,13 +91,13 @@ describe('MappersmithReduxMiddleware', () => {
 
       client.Blog.post()
         .then((response) => {
-          done.fail('this should fail')
+          done.fail(`Expected this promise to fail: ${response.data()}`)
         })
         .catch((response) => {
           const actions = store.getActions()
-          expect(actions[0]).toEqual(jasmine.objectContaining({ type: 'mappersmith/REQUEST_BLOG_POST' }))
+          expect(actions[0]).toEqual(jasmine.objectContaining({ type: 'mappersmith/request/Blog/post' }))
           expect(actions[1]).toEqual({
-            type: 'mappersmith/FAILURE_BLOG_POST',
+            type: 'mappersmith/failure/Blog/post',
             payload: {
               status: 503,
               headers: { 'content-type': 'application/json' },
