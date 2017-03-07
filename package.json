@@ -1,5 +1,6 @@
 {
   "name": "mappersmith-redux-middleware",
+  "description": "it is a middleware for mappersmith which dispatches your request lifecycle to a redux store",
   "version": "0.1.0",
   "main": "index.js",
   "scripts": {
