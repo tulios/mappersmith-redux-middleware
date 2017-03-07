@@ -20,6 +20,12 @@
   "bugs": {
     "url": "https://github.com/tulios/mappersmith-redux-middleware/issues"
   },
+  "keywords": [
+    "mappersmith",
+    "redux",
+    "middleware",
+    "redux-middleware"
+  ],
   "homepage": "https://github.com/tulios/mappersmith-redux-middleware",
   "dependencies": {
     "mappersmith": ">= 2.0.1 < 3.0.0"
